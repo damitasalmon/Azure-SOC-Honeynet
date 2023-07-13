@@ -23,6 +23,7 @@ The architecture of the mini honeynet in Azure consists of the following compone
 - Azure Key Vault
 - Azure Storage Account
 - Microsoft Sentinel
+- Microsoft Defender for Cloud
 
 To collect the metrics for the insecure environment, all resources were originally deployed, exposed to the  public internet. The Virtual Machines had their Network Security Groups open (allowing all traffic) and built-in firewalls disabled. All other resources were deployed with endpoints visible to the public Internet.
 
@@ -85,17 +86,26 @@ Stop Time	2023-07-10 22:23:51
 ## Metrics After Hardening / Security Controls
 
 The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls: <br />
-Start Time 2023-03-18 15:37
-Stop Time	2023-03-19 15:37
+2023-07-11 22:15<br />
+2023-07-12 22:15
 
 | Metric                   | Count
 | ------------------------ | -----
-| SecurityEvent            | 8778
-| Syslog                   | 25
+| SecurityEvent            | 22668
+| Syslog                   | 24
 | SecurityAlert            | 0
 | SecurityIncident         | 0
 | AzureNetworkAnalytics_CL | 0
 
+### Impact
+
+| Metric                                       | Change post-hardening
+| -------------------------------------------- | -----
+| SecurityEvent (Windows VMs)                  | 82.78%
+| Syslog (Linux Vms)                           | 99.50%
+| SecurityAlert (Microsoft Defender for Cloud) | 100%
+| SecurityIncident (Sentinel Incidents)        | 100%
+| AzureNetworkAnalytics_CL                     | 100%
 
 ## Conclusion
 
