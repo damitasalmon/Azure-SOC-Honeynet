@@ -12,9 +12,6 @@ In this project, I build a small-scale honeynet in Azure. I utilized Log Analyti
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
 
 <!-- ## Architecture Before Hardening / Security Controls
-![Architecture Diagram]()
-
-## Architecture After Hardening / Security Controls
 ![Architecture Diagram]() --> 
 
 The architecture of the mini honeynet in Azure consists of the following components:
@@ -29,7 +26,10 @@ The architecture of the mini honeynet in Azure consists of the following compone
 
 To collect the metrics for the insecure environment, all resources were originally deployed, exposed to the  public internet. The Virtual Machines had their Network Security Groups open (allowing all traffic) and built-in firewalls disabled. All other resources were deployed with endpoints visible to the public Internet.
 
-To collect the metrics for the secured environment, Network Security Groups were hardened by blocking ALL traffic (with the exception of my workstation), and all other resources were protected by their built-in firewalls as well as Private Endpoint.
+### Implementing Security Controls
+
+
+To collect the metrics for the secured environment, Network Security Groups were hardened by blocking ALL traffic (with the exception of my workstation), and built-in firewalls enabled. Azure Key Vault and Storage Container were protected by disabling access to public endpoints and replacing them with rivate endpoints.
 
 ## Attack Maps Before Hardening / Security 
 
@@ -58,4 +58,49 @@ Stop Time	2023-07-10 22:23:51
 | SecurityAlert            | 6
 | SecurityIncident         | 359
 | AzureNetworkAnalytics_CL | 2450
+
+<!-- ## Architecture After Hardening / Security Controls
+![Architecture Diagram]() --> 
+
+<!-- ## Architecture After Hardening / Security Controls
+![Architecture Diagram]() --> 
+
+
+## Attack Maps After Hardening / Security Controls
+
+```All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
+
+### NSG Allowed Malicious Inbound Flows
+![NSG Allowed Inbound Malicious Flows](./Attack-Maps/nsg-after.png)<br>
+
+### Linux SSH Authentication Failures
+![Linux Syslog Auth Fail](./Attack-Maps/syslog-after.png)<br>
+
+### Windows RDP/SMB Authentication Failures
+![Windows RDP/SMB Auth Fail](./Attack-Maps/windows-rdp-smb-after.png)<br>
+
+### MS SQL Server Authentication Failures
+![MSSQL Server Auth Fail](./Attack-Maps/mssql-after.png)<br>
+
+## Metrics After Hardening / Security Controls
+
+The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls: <br />
+Start Time 2023-03-18 15:37
+Stop Time	2023-03-19 15:37
+
+| Metric                   | Count
+| ------------------------ | -----
+| SecurityEvent            | 8778
+| Syslog                   | 25
+| SecurityAlert            | 0
+| SecurityIncident         | 0
+| AzureNetworkAnalytics_CL | 0
+
+
+## Conclusion
+
+In this project, a mini honeynet was constructed in Microsoft Azure utilizing Log Analytics with Microsoft Sentinel. Sentinel used logs ingested by a Log Analytics workspace to trigger alerts and create incidents. Next, logging was enabled and data collected on the insecure environment based on established security metrics, before applying security controls. The logs and data were reassessed after implementing security measures. As a result, the number of security events and incidents were drastically reduced after the security controls were applied. 
+
+It is worth noting that if the resources within the network were heavily utilized by regular users, it is likely that more security events and alerts may have been generated within the 24-hour period following the implementation of the security controls.
+
 
