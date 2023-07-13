@@ -69,7 +69,7 @@ Stop Time	2023-07-10 22:23:51
 
 ## Attack Maps After Hardening / Security Controls
 
-```All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.```
+```All map queries returned no results due to no instances of malicious activity for the 24-hour period after hardening.```
 
 ### NSG Allowed Malicious Inbound Flows
 ![NSG Allowed Inbound Malicious Flows](./Attack-Maps/nsg-after.png)<br>
@@ -83,9 +83,9 @@ Stop Time	2023-07-10 22:23:51
 ### MS SQL Server Authentication Failures
 ![MSSQL Server Auth Fail](./Attack-Maps/mssql-after.png)<br>
 
-## Metrics After Hardening / Security Controls
+## Metrics After Hardening 
 
-The following table shows the metrics we measured in our environment for another 24 hours, but after we have applied security controls: <br />
+The following table shows the measurements taken after applying the security controls the environment and observing for another 24 hours: <br />
 2023-07-11 22:15<br />
 2023-07-12 22:15
 
@@ -97,7 +97,7 @@ The following table shows the metrics we measured in our environment for another
 | SecurityIncident         | 0
 | AzureNetworkAnalytics_CL | 0
 
-### Impact
+### Impact of Security Controls 
 
 | Metric                                       | Change post-hardening
 | -------------------------------------------- | -----
