@@ -31,7 +31,7 @@ The architecture of the mini honeynet in Azure consists of the following tools a
 
 Additionally, the SOC utilized the following tools, components and regulations: 
 - Microsoft Sentinel (SIEM)
-- Microsoft Defender for Cloud
+- Microsoft Defender for Cloud (MDC)
   - [NIST SP 800-53 Revision 4](https://csrc.nist.gov/publications/detail/sp/800-53/rev-4/archive/2015-01-22)
   - [PCI DSS 3.2.1](https://listings.pcisecuritystandards.org/documents/PCI_DSS-QRG-v3_2_1.pdf) 
 - Log Analytics Workspace
@@ -60,7 +60,7 @@ To collect the metrics for the secured environment, Network Security Groups were
 
 ## Metrics Before Hardening / Security Controls
 
-The following table shows the metrics we measured in our insecure environment for 24 hours: <br>
+The following table shows the measurements taken in the insecure environment for 24 hours: <br>
 Start Time	2023-07-09 22:23:51 <br>
 Stop Time	2023-07-10 22:23:51
 
