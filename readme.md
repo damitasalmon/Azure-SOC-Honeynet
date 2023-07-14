@@ -26,6 +26,7 @@ The architecture of the mini honeynet in Azure consists of the following tools a
 - Azure Storage Account
 - Microsoft SQL Server
 - SQL Server Management Studio (SSMS)
+- Azure Active Directory
 - PowerShell
 
 Additionally, the SOC utilized the following tools, components and regulations: 
