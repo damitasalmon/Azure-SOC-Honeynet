@@ -37,8 +37,6 @@ Additionally, the SOC utilized the following tools, components and regulations:
 - Windows Event Viewer
 - Kusto Query Language (KQL)
 
-
-
 To collect the metrics for the insecure environment, all resources were originally deployed, exposed to the  public internet. The Virtual Machines had their Network Security Groups open (allowing all traffic) and built-in firewalls disabled. All other resources were deployed with endpoints visible to the public Internet.
 
 ### Implementing Security Controls
