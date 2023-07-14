@@ -1,4 +1,7 @@
 # Building a SOC + Honeynet in Azure (w/Live Traffic)
+
+Note: This is a general overview. For a more in-depth (read: lengthy) walkthrough of the process, check my [Field Notes](https://iruldanet.gitlab.io/field-notes/azure-soc-honeynet/). 
+
 <!-- Insert Project Image -->
 
 ## Introduction
@@ -14,16 +17,27 @@ In this project, I build a small-scale honeynet in Azure. I utilized Log Analyti
 <!-- ## Architecture Before Hardening / Security Controls
 ![Architecture Diagram]() --> 
 
-The architecture of the mini honeynet in Azure consists of the following components:
+The architecture of the mini honeynet in Azure consists of the following tools and components:
 
 - Virtual Network (VNet)
 - Network Security Group (NSG)
-- Virtual Machines (2 windows, 1 linux)
-- Log Analytics Workspace
+- Virtual Machines (2 Windows, 1 Linux)
 - Azure Key Vault
 - Azure Storage Account
-- Microsoft Sentinel
+- Microsoft SQL Server
+- SQL Server Management Studio (SSMS)
+- PowerShell
+
+Additionally, the SOC utilized the following tools, components and regulations: 
+- Microsoft Sentinel (SIEM)
 - Microsoft Defender for Cloud
+  - [NIST SP 800-53 Revision 4](https://csrc.nist.gov/publications/detail/sp/800-53/rev-4/archive/2015-01-22)
+  - [PCI DSS 3.2.1](https://listings.pcisecuritystandards.org/documents/PCI_DSS-QRG-v3_2_1.pdf) 
+- Log Analytics Workspace
+- Windows Event Viewer
+- Kusto Query Language (KQL)
+
+
 
 To collect the metrics for the insecure environment, all resources were originally deployed, exposed to the  public internet. The Virtual Machines had their Network Security Groups open (allowing all traffic) and built-in firewalls disabled. All other resources were deployed with endpoints visible to the public Internet.
 
