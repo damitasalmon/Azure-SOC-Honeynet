@@ -41,8 +41,6 @@ To collect the metrics for the insecure environment, all resources were original
 
 ### Implementing Security Controls
 
-### Azure Private Link & Firewall for Resources
-
 To collect the metrics for the secured environment, Network Security Groups were hardened by blocking ALL traffic (with the exception of my workstation), and built-in firewalls enabled. Azure Key Vault and Storage Container were protected by disabling access to public endpoints and replacing them with rivate endpoints.
 
 ## Attack Maps Before Hardening / Security 
