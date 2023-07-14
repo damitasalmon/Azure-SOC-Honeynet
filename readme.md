@@ -60,7 +60,7 @@ To collect the metrics for the secured environment, Network Security Groups were
 
 ## Metrics Before Hardening / Security Controls
 
-The following table shows the measurements taken in the insecure environment for 24 hours: <br>
+The following table shows the measurements taken in the insecure environment after 24 hours: <br>
 Start Time	2023-07-09 22:23:51 <br>
 Stop Time	2023-07-10 22:23:51
 
