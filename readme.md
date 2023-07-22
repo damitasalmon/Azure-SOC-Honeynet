@@ -1,6 +1,6 @@
 # Building a SOC + Honeynet in Azure (w/Live Traffic)
 
-Note: This is a general overview. For a more in-depth (read: lengthy) walkthrough of the process, check my [Field Notes](https://iruldanet.gitlab.io/field-notes/azure-soc-honeynet/). 
+<!-- Note: This is a general overview. For a more in-depth (read: lengthy) walkthrough of the process, check my [Field Notes](https://iruldanet.gitlab.io/field-notes/azure-soc-honeynet/). -->
 
 <!-- Insert Project Image -->
 
