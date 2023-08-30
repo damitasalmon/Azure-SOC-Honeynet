@@ -14,8 +14,8 @@ In this project, I built a small-scale honeynet in Azure. I utilized Log Analyti
 - SecurityIncident (Incidents created by Sentinel)
 - AzureNetworkAnalytics_CL (Malicious Flows allowed into our honeynet)
 
-<!-- ## Architecture Before Hardening / Security Controls
-![Architecture Diagram]() --> 
+## Architecture Before Hardening / Security Controls
+![Architecture Diagram](./Architecture-Topology/architecture-before.png)<br>
 
 The architecture of the mini honeynet in Azure consists of the following tools and components:
 
@@ -43,9 +43,6 @@ To collect the metrics for the insecure environment, all resources were original
 ### Implementing Security Controls
 
 To collect the metrics for the secured environment, Network Security Groups were hardened by blocking ALL traffic (with the exception of my workstation), and built-in firewalls enabled. Azure Key Vault and Storage Container were protected by disabling access to public endpoints and replacing them with rivate endpoints.
-
-<## Architecture Before Hardening / Security Controls
-![Architecture Diagram](./Architecture-Topology/architecture-before.png)<br>
 
 ## Attack Maps Before Hardening / Security 
 
