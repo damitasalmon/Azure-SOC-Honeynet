@@ -74,7 +74,7 @@ Stop Time	2023-07-10 22:23:51
 
 
 ## Architecture After Hardening / Security Controls
-![Architecture Diagram](./Architecture-Topology/architecture-after2.png)<br>
+![Architecture Diagram](./Architecture-Topology/architecture-after4.png)<br>
 
 
 ## Attack Maps After Hardening / Security Controls
