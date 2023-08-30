@@ -2,7 +2,7 @@
 
 <!-- Note: This is a general overview. For a more in-depth (read: lengthy) walkthrough of the process, check my [Field Notes](https://iruldanet.gitlab.io/field-notes/azure-soc-honeynet/). -->
 
-![Architecture Diagram](./Architecture-Topology/topology-diagram.png)
+![Architecture Diagram](./Architecture-Topology/topology-diagram-2.png)
 
 ## Introduction
 
@@ -74,7 +74,7 @@ Stop Time	2023-07-10 22:23:51
 
 
 ## Architecture After Hardening / Security Controls
-<br>
+![Architecture Diagram](./Architecture-Topology/architecture-after-5.png)<br>
 
 ## Attack Maps After Hardening / Security Controls
 
