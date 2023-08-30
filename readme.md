@@ -44,6 +44,9 @@ To collect the metrics for the insecure environment, all resources were original
 
 To collect the metrics for the secured environment, Network Security Groups were hardened by blocking ALL traffic (with the exception of my workstation), and built-in firewalls enabled. Azure Key Vault and Storage Container were protected by disabling access to public endpoints and replacing them with rivate endpoints.
 
+<## Architecture Before Hardening / Security Controls
+![Architecture Diagram](./Architecture-Topology/architecture-before.png)<br>
+
 ## Attack Maps Before Hardening / Security 
 
 ### NSG Allowed Malicious Inbound Flows
@@ -72,11 +75,9 @@ Stop Time	2023-07-10 22:23:51
 | SecurityIncident         | 359
 | AzureNetworkAnalytics_CL | 2450
 
-<!-- ## Architecture After Hardening / Security Controls
-![Architecture Diagram]() --> 
 
-<!-- ## Architecture After Hardening / Security Controls
-![Architecture Diagram]() --> 
+## Architecture After Hardening / Security Controls
+![Architecture Diagram](./Architecture-Topology/architecture-after.png)<br>
 
 
 ## Attack Maps After Hardening / Security Controls
