@@ -1,6 +1,6 @@
-# Building a SOC + Honeynet in Azure (w/Live Traffic)
+# Building a (mini) SOC + Honeynet in Azure (w/Live Traffic)
 
-Note: This is a general overview. For a more in-depth walkthrough of the process, please check my [Field Notes](https://iruldanet.gitlab.io/field-notes/azure-soc-honeynet/) for updates. 
+Note: This is a general overview. For a more in-depth walkthrough of the process, please check my [Field Notes](https://fieldnotes.iruldanet.com/azure-soc-honeynet/) for updates. 
 
 ![Architecture Diagram](./Architecture-Topology/topology-diagram-2.png)
 
