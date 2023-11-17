@@ -6,7 +6,9 @@ Note: This is a general overview. For a more in-depth walkthrough of the process
 
 ## Introduction
 
-In this project, I built a small-scale honeynet in Azure. Log Analytics was used to ingest logs from various sources that Microsoft Sentinel would leverage to build attack maps, trigger alerts, and create incidents. I configured log collection on the insecure environment, set security metrics then observed the environment for 24 hours. After investigating the incidents that Microsoft Sentinel generated during that period, security controls were applied to address the incidents and harden the environment. A second 24-hour observation was conducted to collect new data on the security metrics post-remediation. The collected metrics were:
+In this project, I built a small-scale honeynet and SOC in Azure. Log Analytics was used to ingest logs from various sources that Microsoft Sentinel would leverage to build attack maps, trigger alerts, and create incidents. Microsoft Defender for Cloud was used to monitor and assess the VM configuration relative to regulatory frameworks/security controls. I configured log collection on the insecure environment, set security metrics then observed the environment for 24 hours. After investigating the incidents that Microsoft Sentinel generated during that period, security controls were applied to address the incidents and harden the environment based on recommendations from Microsoft Defender. After a second 24-hour observation new metrics were collected on the environment post-remediation. 
+
+Collected metrics: 
 
 - SecurityEvent (Windows Event Logs)
 - Syslog (Linux Event Logs)
@@ -27,7 +29,6 @@ The architecture of the mini honeynet in Azure consists of the following tools a
 - Microsoft SQL Server
 - SQL Server Management Studio (SSMS)
 - Azure Active Directory
-- PowerShell
 
 Additionally, the SOC utilized the following tools, components and regulations: 
 - Microsoft Sentinel (SIEM)
@@ -37,6 +38,7 @@ Additionally, the SOC utilized the following tools, components and regulations:
 - Log Analytics Workspace
 - Windows Event Viewer
 - Kusto Query Language (KQL)
+- PowerShell 
 
 To collect the metrics for the insecure environment, all resources were originally deployed, exposed to the  public internet. The Virtual Machines had their Network Security Groups open (allowing all traffic) and built-in firewalls disabled. All other resources were deployed with endpoints visible to the public Internet.
 
@@ -118,7 +120,7 @@ The following table shows the measurements taken after applying the security con
 
 ## Conclusion
 
-In this project, a mini honeynet was constructed in Microsoft Azure utilizing Log Analytics with Microsoft Sentinel. Sentinel used logs ingested by a Log Analytics workspace to trigger alerts and create incidents. Next, logging was enabled and data collected on the insecure environment based on established security metrics, before applying security controls. The logs and data were reassessed after implementing security measures. As a result, the number of security events and incidents were drastically reduced after the security controls were applied. 
+In this project, a mini honeynet was constructed in Microsoft Azure utilizing VMs and a SOC with Log Analytics, Microsoft Defender for Cloud and Microsoft Sentinel. Sentinel used logs ingested by a Log Analytics workspace to trigger alerts and create incidents. Next, logging was enabled and data collected on the insecure environment based on established security metrics, before applying security controls recommended by Microsoft Defender. The logs and data were reassessed after implementing security measures. As a result, the number of security events and incidents were drastically reduced after the security controls were applied. 
 
 It is worth noting that if the resources within the network were heavily utilized by regular users, it is likely that more security events and alerts may have been generated within the 24-hour period following the implementation of the security controls.
 
